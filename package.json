@@ -1,8 +1,20 @@
 {
   "name": "poke-vue-3",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/poke-vue-3.umd.js",
+  "module": "./dist/poke-vue-3.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/poke-vue-3.es.js",
+      "require": "./dist/poke-vue-3.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
